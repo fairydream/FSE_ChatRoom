@@ -61,10 +61,6 @@ io.sockets.on('connection', function(socket){
 				socket.broadcast.emit('system_message', getTime(), myname + " left the room");
 			});
 
-		socket.on('logout', function(){
-				console.log(myname + " logged out.");
-				socket.broadcast('system_message', getTime(), myname + " left the room");
-			});
  });
 
 var getTime=function(){

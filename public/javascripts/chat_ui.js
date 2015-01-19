@@ -61,7 +61,6 @@ function onClickSendMessage()
 
 function logout()
 {
-	socket.emit('logout');
 	window.location.replace(window.location);
 }
 
