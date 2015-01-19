@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title> FSE Chat Room </title>
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="CSS/chatRoom.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>	
+		<script src="/javascripts/chat_ui.js"></script>			
+	</head>
+
+	<body>
+		<div class = "container">
+			<div class = "container">
+				<div class="clearfix msg-wrap">
+					<span class = "pull-left">
+						<h1 id = 'head1'> 	
+							<span id = "myname"><%=username%></span>, Welcome to FSE Chat Room!
+						</h1>
+					</span> 
+					<span class = "pull-right">
+						<button type="button" class="btn btn-default" onclick="logout()">Log out</button>
+					</span>
+				</div>
+			</div>			
+			<div class="chat-body">
+				<div class="msg-list"></div>
+            </div>
+			<textarea class="form-control" rows="5" id = "input_edit"></textarea>
+			<br>
+			<button  type="button" class="btn btn-primary" onclick="onClickSendMessage()">
+					Post
+			</button>
+		</div>
+	</body>
+	
+<html>
